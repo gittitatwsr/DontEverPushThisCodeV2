@@ -64,6 +64,7 @@ jobs:
                 GITLEAKS_ENABLE_UPLOAD_ARTIFACT: true
                 GITLEAKS_ENABLE_SUMMARY: true
 
+#adada
     # GATE#1a: SAST via SonarQube 
     sast-scan:
         runs-on: ubuntu-latest
