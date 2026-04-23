@@ -60,7 +60,7 @@ jobs:
               uses: gitleaks/gitleaks-action@v2
               continue-on-error: true
               env:
-                GITHUB_TOKEN: secrets.GITHUB_TOKEN
+                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
                 GITLEAKS_ENABLE_UPLOAD_ARTIFACT: true
                 GITLEAKS_ENABLE_SUMMARY: true
 
@@ -110,7 +110,7 @@ jobs:
                 languages: ${{ matrix.language }}
                 # TODO#8: enable extended security + quality query suites
                 # queries: ???
-                queries: +security-extended,+security-and-quality
+                queries: security-extended,security-and-quality
                 # RESOURCE — CodeQL query suites:
                 # https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning-for-compiled-languages#codeql-query-suites
                 #
